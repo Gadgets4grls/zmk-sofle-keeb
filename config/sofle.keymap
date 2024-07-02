@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // custom modifier combinations
-#define LHYP LSHFT(LCTRL(LALT(LGUI())))
+#define LHYP 0x0f
 
 
 
