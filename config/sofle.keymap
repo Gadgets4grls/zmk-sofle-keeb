@@ -48,8 +48,8 @@
     combos {
         compatible = "zmk,combo";
         combo_hyp_num {
-            timeout-ms = <100>;
-            key-positions = <38 39>;
+            timeout-ms = <200>;
+            key-positions = <1 2>;
             bindings = <&kp P>;
 
         };
