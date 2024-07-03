@@ -44,20 +44,16 @@
 };
 
 
-/{
+/ {
     combos {
-        compatible = "zmk,combo";
-        combo_hyp_num {
-            timeout-ms = <200>;
+        compatible = "zmk,combos";
+        combo_p {
+            timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp P>;
-
         };
-
     };
-
 };
-
 
 
 
