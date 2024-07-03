@@ -47,9 +47,9 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_p {
+        combo_l3 {
             timeout-ms = <200>;
-            key-positions = <54 54>;
+            key-positions = <53 54>;
             bindings = <&mo 2>;
         };
     };
