@@ -115,7 +115,37 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
                             };             
+        rpi: require_prior_idle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
 
+       lh_pht: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <25 26 27 28 29>;    // <---[[right-hand keys]]
+        };
+       rh_pht: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <30 31 32 33 34 35>;    // <---[[right-hand keys]]
+        };
+
+
+    
            };
 };
 
@@ -130,7 +160,7 @@
 //        Tab               Q                 W                 E                 R                 T                                                     Y                 U                 I                 O                 P                 -         
         &kp TAB           &kp Q             &kp W             &kp E             &kp R             &kp T                                                 &kp Y             &kp U             &kp I             &kp O             &kp P           &kp MINUS     
 //      HYPER               A                 S                 D                 F                 G                                                     H                 J                 K                 L                 ;                 SQT       
-       &kp LHYP       &mt LSHFT A       &mt LCTRL S       &mt LALT D            &mt LGUI F        &mt LMEH G                                         &mt RMEH H        &mt RGUI J        &mt RALT K        &mt RCTRL L      &mt RSHFT SEMI     &mt RHYP SQT     
+       &kp LHYP     &lh_pht LSHFT A    &lh_pht LCTRL S   &lh_pht LALT D    &lh_pht LGUI F    &lh_pht LMEH G                                       &rh_pht RMEH H     &rh_pht RGUI J    &rh_pht RALT K   &rh_pht RCTRL L   &rh_pht RSHFT SEMI  &rh_pht RHYP SQT     
 //      LSHIFT              Z                 X                 C                 V                 B               C_MUTE            RGB TOG             N                 M                 ,                 .                 /               RSHIFT      
       &kp LSHFT           &kp Z             &kp X             &kp C             &kp V             &kp B           &kp C_MUTE      &rgb_ug RGB_TOG       &kp N             &kp M           &kp COMMA           &kp DOT          &kp FSLH         &kp RSHFT     
 //                                          LCTRL              LALT              LGUI             SPACE               RET             LAYER 2           LAYER 1            RGUI              RALT             RCTRL                                           
