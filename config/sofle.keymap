@@ -51,37 +51,37 @@
             timeout-ms = <200>;
             key-positions = <36 50>;
             bindings = <&tog 0>;
-        }
+        };
         combo_tl1 {
             timeout-ms = <200>;
             key-positions = <36 51>;
             bindings = <&tog 1>;
-        }
+        };
         combo_tl2 {
             timeout-ms = <200>;
             key-positions = <36 52>;
             bindings = <&tog 3>;
-        }
+        };
         combo_tl3 {
             timeout-ms = <200>;
             key-positions = <36 55>;
             bindings = <&tog 4>;
-        }
+        };
         combo_ml0 {
             timeout-ms = <200>;
             key-positions = <24 50>;
             bindings = <&mo 0>;
-        }
+        };
         combo_ml1 {
             timeout-ms = <200>;
             key-positions = <24 51>;
             bindings = <&mo 1>;
-        }
+        };
         combo_ml2 {
             timeout-ms = <200>;
             key-positions = <24 52>;
             bindings = <&mo 3>;
-        }
+        };
         combo_ml3 {
             timeout-ms = <200>;
             key-positions = <24 55>;
