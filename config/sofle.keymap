@@ -34,15 +34,6 @@
     resolution = <2>;
 };
 
-/{
-    condtional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
-};
 
 
 / {
@@ -60,7 +51,7 @@
         };
         combo_tl2 {
             timeout-ms = <200>;
-            key-positions = <36 53>;
+            key-positions = <36 52>;
             bindings = <&tog 3>;
         };
         combo_ml0 {
@@ -75,7 +66,7 @@
         };
         combo_ml2 {
             timeout-ms = <200>;
-            key-positions = <24 53>;
+            key-positions = <24 52>;
             bindings = <&mo 3>;
         };
     };
