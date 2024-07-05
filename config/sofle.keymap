@@ -22,6 +22,7 @@
 
 // custom modifier combinations
 #define LHYP LS(LC(LA(LGUI)))
+#define RHYP RS(RC(RA(RGUI)))
 
 
 
@@ -59,7 +60,7 @@
         };
         combo_tl2 {
             timeout-ms = <200>;
-            key-positions = <36 52>;
+            key-positions = <36 53>;
             bindings = <&tog 3>;
         };
         combo_ml0 {
@@ -74,7 +75,7 @@
         };
         combo_ml2 {
             timeout-ms = <200>;
-            key-positions = <24 52>;
+            key-positions = <24 53>;
             bindings = <&mo 3>;
         };
     };
@@ -89,8 +90,7 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-                            }; 
-            
+                            };             
 
            };
 };
@@ -106,7 +106,7 @@
 //        Tab               Q                 W                 E                 R                 T                                                     Y                 U                 I                 O                 P                 -         
         &kp TAB           &kp Q             &kp W             &kp E             &kp R             &kp T                                                 &kp Y             &kp U             &kp I             &kp O             &kp P           &kp MINUS     
 //      HYPER               A                 S                 D                 F                 G                                                     H                 J                 K                 L                 ;                 SQT       
-       &kp LHYP           &kp A             &kp S             &kp D             &kp F             &kp G                                                 &kp H             &kp J             &kp K             &kp L            &kp SEMI           &kp SQT     
+       &kp LHYP           &kp A             &kp S             &kp D             &kp F             &kp G                                                 &kp H             &kp J             &kp K             &kp L            &kp SEMI           &mt RHYP SQT     
 //      LSHIFT              Z                 X                 C                 V                 B               C_MUTE            RGB TOG             N                 M                 ,                 .                 /               RSHIFT      
       &kp LSHFT           &kp Z             &kp X             &kp C             &kp V             &kp B           &kp C_MUTE      &rgb_ug RGB_TOG       &kp N             &kp M           &kp COMMA           &kp DOT          &kp FSLH         &kp RSHFT     
 //                                          LCTRL              LALT              LGUI             SPACE               RET             LAYER 2           LAYER 1            RGUI              RALT             RCTRL                                           
