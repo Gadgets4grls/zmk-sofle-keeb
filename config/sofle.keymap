@@ -27,8 +27,6 @@
 #define RHYP RS(RC(RA(RGUI)))
 #define LMEH LS(LC(LALT))
 #define RMEH RS(RC(RALT))
-#define PSCC LS(LC(LGUI(key)))
-#define PMEH RS(RC(RGUI(key)))
 
 &led_strip {
     chain-length = <35>;
