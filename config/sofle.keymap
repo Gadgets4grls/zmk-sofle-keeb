@@ -137,7 +137,9 @@
             hold-trigger-key-positions = <30 31 32 33 34>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
- 
+
+        &mt { tapping-term ms = <300>; 
+        };
 
 
 
