@@ -5,6 +5,9 @@
 #define LMEH LS(LC(LALT))
 #define LMEHK(key) LS(LC(LA(key)))
 
+#define LSCC LS(LC(LGUI))
+#define LSCCK(key) LS(LC(LGUI(key)))
+
 #define RHYP RS(RC(RA(RGUI)))
 #define RHYPK(key) RS(RC(RA(RG(key))))
 
