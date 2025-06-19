@@ -152,7 +152,11 @@
             hold-trigger-key-positions = <35>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-
+        srgb: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&rgb_ug>, <&rgb_ug>;
+        };
 
 
     
@@ -175,7 +179,7 @@
       &kp LSHFT           &kp Z             &kp X             &kp C             &kp V             &kp B           &kp C_MUTE      &rgb_ug RGB_TOG       &kp N             &kp M           &kp COMMA           &kp DOT          &kp FSLH         &kp RSHFT     
 //                                          LCTRL              LALT              LGUI             SPACE               RET             LAYER 2           LAYER 1            RGUI              RALT             RCTRL                                           
                                           &kp LCTRL          &kp LALT          &kp LGUI         &lt num SPACE     &lt mod RET     &mo 2            &mo 1            &kp RGUI          &kp RALT         &kp RCTRL                                         
-        >;        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+        >;        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &srgb RGB_BRD RGB_BRI>;
         };        
 
     mod_layer       {   bindings =< 
