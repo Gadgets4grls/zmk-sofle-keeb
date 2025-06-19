@@ -27,8 +27,8 @@
 #define RHYP RS(RC(RA(RGUI)))
 #define LMEH LS(LC(LALT))
 #define RMEH RS(RC(RALT))
-#define LSCC LS(LC(LGUI(
-#define RSCC RS(RC(RGUI))
+#define PSCC LS(LC(LGUI(key)))
+#define PMEH RS(RC(RGUI(key)))
 
 &led_strip {
     chain-length = <35>;
@@ -212,7 +212,7 @@
 //                                                                                                                                                                          -                 =                 [                 ]                 \         
         &trans            &none             &none             &none             &none             &none                                                                 &kp MINUS         &kp EQUAL          &kp LBKT          &kp RBKT          &kp BSLH     
 //      LSHIFT                                                                                                                                                                                                                                                
-      &kp LSHFT           &kp LS(LC(LGUI(KP_N1)))            &none             &none             &none             &none             &trans            &trans            &none             &none             &none             &none             &none             &none       
+      &kp LSHFT           &none             &none             &none             &none             &none             &trans            &trans            &none             &none             &none             &none             &none             &none       
 //                                                                                                                                                                                                                                                            
                                             &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans                                          
         >;        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
