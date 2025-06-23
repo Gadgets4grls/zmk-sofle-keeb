@@ -253,7 +253,7 @@
 //          `                    !                    @                    #                    $                    %                                                              ^                    &                    *                    (                    )                  bksp         
           &gresc             &kp RS(N1)          &kp RS( N2)          &kp RS( N3)          &kp RS( N4)          &kp RS( N5)                                                    &kp LS( N6)          &kp LS( N7)          &kp LS( N8)          &kp LS( N9)          &kp LS( N0)           &kp BSPC       
 //         Tab                   Q                    W                    E                    R                    T                                                              Y                    U                    I                    O                    P                    -          
-         &kp TAB             &kp RS(A)            &kp RS(S)            &kp RS(E)            &kp RS(R)            &kp RS(T)                                                      &kp LS(Y)            &kp LS(U)            &kp LS(I)            &kp LS(O)            &kp LS(P)          &kp RS(MINUS)    
+         &kp TAB             &kp RS(Q)            &kp RS(W)            &kp RS(E)            &kp RS(R)            &kp RS(T)                                                      &kp LS(Y)            &kp LS(U)            &kp LS(I)            &kp LS(O)            &kp LS(P)          &kp RS(MINUS)    
 //        HYPER                  A                    S                    D                    F                    G                                                              H                    J                    K                    L                    ;               HYPER ( " )     
         &kp LHYP             &kp RS(A)            &kp RS(S)            &kp RS(D)            &kp RS(F)            &kp RS(G)                                                      &kp LS(H)            &kp LS(J)            &kp LS(K)            &kp LS(L)          &kp LS(SEMI)          &kp RS(SQT)     
 //        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 N                    M                    ,                    .                    /                  RSHIFT       
@@ -262,6 +262,8 @@
                                                   &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt mod RET             &mo 2                &mo 1              &kp RGUI             &kp RALT             &kp RCTRL                                                
           >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
           };         
+
+
 
               };
        
