@@ -20,6 +20,8 @@
 #define colemak 6
 #define pdfext 4
 #define pdfdel 5
+#define sflayer 6
+
 
 
 // custom modifier combinations
@@ -169,7 +171,7 @@
 //        Tab               Q                 W                 E                 R                 T                                                     Y                 U                 I                 O                 P                 -         
         &kp TAB           &lt mod Q         &lt num W         &lt punc E        &lt pdfext R      &lt pdfdel T                                                 &kp Y             &kp U             &kp I             &kp O             &kp P           &kp MINUS     
 //      HYPER               A                 S                 D                 F                 G                                                     H                 J                 K                 L                 ;                 SQT       
-      &kp LHYP            &hml LSHFT A      &hml LCTRL S      &hml LALT D        &hml LGUI F       &hml LMEH G                                           &hmr RMEH H       &hmr RGUI J     &hmr RALT K         &hmr RCTRL L     &hmr RSHFT SEMI  &hmt RHYP SQT   
+      &kp LHYP            &lt sflayer A      &hml LCTRL S      &hml LALT D        &hml LGUI F       &hml LMEH G                                           &hmr RMEH H       &hmr RGUI J     &hmr RALT K         &hmr RCTRL L     &lt sflayer SEMI  &hmt RHYP SQT   
 //      LSHIFT              Z                 X                 C                 V                 B               C_MUTE            RGB TOG             N                 M                 ,                 .                 /               RSHIFT      
       &kp LSHFT           &kp Z             &kp X             &kp C             &kp V             &kp B           &kp C_MUTE      &rgb_ug RGB_TOG       &kp N             &kp M           &kp COMMA           &kp DOT          &kp FSLH         &kp RSHFT     
 //                                          LCTRL              LALT              LGUI             SPACE               RET             LAYER 2           LAYER 1            RGUI              RALT             RCTRL                                           
@@ -246,6 +248,21 @@
                                                     &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans                                                 
           >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
           };               
+
+     Shift_Layer         {   bindings =<  
+//          `                    !                    @                    #                    $                    %                                                              ^                    &                    *                    (                    )                  bksp         
+          &gresc             &kp LS(N1)          &kp LS( N2)          &kp LS( N3)          &kp LS( N4)          &kp LS( N5)                                                    &kp LS( N6)          &kp LS( N7)          &kp LS( N8)          &kp LS( N9)          &kp LS( N0)           &kp BSPC       
+//         Tab                   Q                    W                    E                    R                    T                                                              Y                    U                    I                    O                    P                    -          
+         &kp TAB             &kp LS(A)            &kp LS(S)            &kp LS(E)             &kp LS®             &kp LS(T)                                                      &kp LS(Y)            &kp LS(U)            &kp LS(I)            &kp LS(O)            &kp LS(P)          &kp LS(MINUS)    
+//        HYPER                  A                    S                    D                    F                    G                                                              H                    J                    K                    L                    ;               HYPER ( " )     
+        &kp LHYP             &kp LS(A)            &kp LS(S)            &kp LS(D)            &kp LS(F)            &kp LS(G)                                                      &kp LS(H)            &kp LS(J)            &kp LS(K)            &kp LS(L)          &kp LS(SEMI)          &kp LS(SQT)     
+//        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 N                    M                    ,                    .                    /                  RSHIFT       
+        &kp LSHFT            &kp LS(Z)            &kp LS(X)             &kp LS©             &kp LS(V)            &kp LS(B)            &kp C_MUTE        &rgb_ug RGB_TOG         &kp LS(N)            &kp LS(M)          &kp LS(COMMA)         &kp LS(DOT)         &kp LS(FSLH)           &kp RSHFT      
+//                                                  LCTRL                LALT                 LGUI                 SPACE                 RET                LAYER 2              LAYER 1               RGUI                 RALT                 RCTRL                                                  
+                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt mod RET             &mo 2                &mo 1              &kp RGUI             &kp RALT             &kp RCTRL                                                
+          >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+          };         
+
 
 
               };
