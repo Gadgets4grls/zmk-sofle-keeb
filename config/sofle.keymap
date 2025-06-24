@@ -186,7 +186,7 @@
 //        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 N                    M                    ,                    .                    /                  RSHIFT       
         &kp LSHFT            &kp RS(Z)            &kp RS(X)            &kp RS(C)            &kp RS(V)            &kp RS(B)            &kp C_MUTE        &rgb_ug RGB_TOG         &kp LS(N)            &kp LS(M)          &kp LS(COMMA)         &kp LS(DOT)         &kp LS(FSLH)           &kp RSHFT      
 //                                                  LCTRL                LALT                 LGUI                 SPACE                 RET                LAYER 2              LAYER 1               RGUI                 RALT                 RCTRL                                                  
-                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt mod RET             &lt mod RET        &lt num Space         &kp RGUI             &kp RALT             &kp RCTRL                                                
+                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt nav RET          &lt nav RET         &lt num SPACE          &kp RGUI             &kp RALT             &kp RCTRL                                                
           >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
           };         
 
