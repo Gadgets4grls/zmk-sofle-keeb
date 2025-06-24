@@ -67,7 +67,7 @@
         combo_tl4 {
             timeout-ms = <200>;
             key-positions = <36 53>;
-            bindings = <&tog colemak;
+            bindings = <&tog colemak>;
         };
         combo_tl5 {
             timeout-ms = <200>;
