@@ -15,13 +15,13 @@
 //Layer Names Defines
 #define qwerty 0
 #define sqwerty 1
-#define nav 2
-#define num 3
-#define sym 4
-#define pdfext 5
-#define pdfdel 6
-#define colemak 7
-#define scolemak 8
+#define colemak 2
+#define scolemak 3
+#define nav 4
+#define num 5
+#define sym 6
+#define pdfext 7
+#define pdfdel 8
 
 
 
@@ -52,22 +52,22 @@
         combo_tl1 {
             timeout-ms = <200>;
             key-positions = <36 50>;
-            bindings = <&tog 1>;
+            bindings = <&tog nav>;
         };
         combo_tl2 {
             timeout-ms = <200>;
             key-positions = <36 51>;
-            bindings = <&tog 2>;
+            bindings = <&tog num>;
         };
         combo_tl3 {
             timeout-ms = <200>;
             key-positions = <36 52>;
-            bindings = <&tog 3>;
+            bindings = <&tog sym>;
         };
         combo_tl4 {
             timeout-ms = <200>;
             key-positions = <36 53>;
-            bindings = <&tog 4>;
+            bindings = <&tog qwerty;
         };
         combo_tl5 {
             timeout-ms = <200>;
@@ -80,22 +80,22 @@
         combo_tlr1 {
             timeout-ms = <200>;
             key-positions = <49 59>;
-            bindings = <&tog 1>;
+            bindings = <&tog nav>;
         };
         combo_tlr2 {
             timeout-ms = <200>;
             key-positions = <49 58>;
-            bindings = <&tog 2>;
+            bindings = <&tog num>;
         };
         combo_tlr3 {
             timeout-ms = <200>;
             key-positions = <49 57>;
-            bindings = <&tog 3>;
+            bindings = <&tog sym>;
         };
         combo_tlr4 {
             timeout-ms = <200>;
             key-positions = <49 56>;
-            bindings = <&tog 4>;
+            bindings = <&tog qwerty>;
         };
         combo_tlr5 {
             timeout-ms = <200>;
@@ -190,6 +190,34 @@
           >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
           };         
 
+    colemak_layer        {   bindings =<  
+//          `                    1                    2                    3                    4                    5                                                              6                    7                    8                    9                    0                  bksp         
+          &gresc               &kp N1               &kp N2               &kp N4               &kp N4               &kp N5                                                         &kp N6               &kp N7               &kp N8               &kp N9               &kp N0             &kp BSPC       
+//         Tab                   Q                    W                    F                    P                    G                                                              J                    L                    U                    Y                    ;                    -          
+         &kp TAB             &lt nav Q            &lt num W            &lt sym F          &lt pdfext P         &lt pdfdel G                                                       &kp J                &kp L                &kp U                &kp Y              &kp SEMI             &kp MINUS      
+//        HYPER                  A                    R                    S                    T                    D                                                              H                    N                    E                    I                    O                HYPER(')       
+        &kp LHYP           &lt scolemak A       &hml LCTRL R          &hml LALT S          &hml LGUI T          &hml LMEH G                                                    &hmr RMEH H          &hmr RGUI N          &hmr RALT E         &hmr RCTRL I         &lt scolemak O       &mt RHYP SQT     
+//        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 K                    M                    ,                    .                    /                  RSHIFT       
+        &kp LSHFT              &kp Z                &kp X                &kp C                &kp V                &kp B              &kp C_MUTE        &rgb_ug RGB_TOG           &kp K                &kp M              &kp COMMA             &kp DOT             &kp FSLH             &kp RSHFT      
+//                                                  LCTRL                LALT                 LGUI                 SPACE                 RET                LAYER 2              LAYER 1               RGUI                 RALT                 RCTRL                                                  
+                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt nav RET          &lt nav RET         &lt num SPACE          &kp RGUI             &kp RALT             &kp RCTRL                                                
+          >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+          };         
+
+   scolemak_layer        {   bindings =<  
+//          `                    1                    2                    3                    4                    5                                                              6                    7                    8                    9                    0                  bksp         
+          &gresc             &kp RS(N1)           &kp RS(N2)           &kp RS(N4)           &kp RS(N4)           &kp RS(N5)                                                     &kp LS(N6)           &kp LS(N7)           &kp LS(N8)           &kp LS(N9)           &kp LS(N0)           &kp BSPC       
+//         Tab                   Q                    W                    F                    P                    G                                                              J                    L                    U                    Y                    ;                    -          
+         &kp TAB             &kp RS(Q)            &kp RS(W)            &kp RS(F)            &kp RS(P)            &kp RS(G)                                                      &kp LS(J)            &kp LS(L)            &kp LS(U)            &kp LS(Y)          &kp LS(SEMI)           &kp MINUS      
+//        HYPER                  A                    R                    S                    T                    D                                                              H                    N                    E                    I                    O                HYPER(')       
+        &kp LHYP             &kp RS(A)            &kp RS(R)            &kp RS(S)            &kp RS(T)            &kp RS(D)                                                      &kp LS(H)            &kp LS(N)            &kp LS(E)            &kp LS(I)            &kp LS(O)          &mt RHYP SQT     
+//        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 K                    M                    ,                    .                    /                  RSHIFT       
+        &kp LSHFT            &kp RS(Z)            &kp RS(X)            &kp RS(C)            &kp RS(V)            &kp RS(B)            &kp C_MUTE        &rgb_ug RGB_TOG           &kp K                &kp M              &kp COMMA             &kp DOT             &kp FSLH             &kp RSHFT      
+//                                                  LCTRL                LALT                 LGUI                 SPACE                 RET                LAYER 2              LAYER 1               RGUI                 RALT                 RCTRL                                                  
+                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt nav RET          &lt nav RET         &lt num SPACE          &kp RGUI             &kp RALT             &kp RCTRL                                                
+          >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+          };         
+
       nav_layer          {   bindings =<  
 //          `                    F1                   F2                   F3                   F4                   F5                                                             F6                   F7                   F8                   F9                  F10                  F11         
         &kp GRAVE              &kp F1               &kp F2               &kp F3               &kp F4               &kp F5                                                         &kp F6               &kp F7               &kp F8               &kp F9              &kp F10              &kp F11       
@@ -226,7 +254,8 @@
 //                                                                                                                                                                                  [                    ]                    \                    ;                   (')                   -          
           &trans               &none                &none                &none                &none                &none                                                        &kp RBKT             &kp LBKT             &kp BSLH             &kp SEMI              &kp SQT             &kp MINUS      
 //        LSHIFT                                                                                                                                                                    <                    >                    +                    =                    ?                    /          
-	    &kp LSHFT              &none                &none                &none                &none                &none &rgb_ug RGB_COLOR_HSB(0,100,25) &rgb_ug RGB_COLOR_HSB(128,100,25)        &kp LT               &kp GT             &kp PLUS             &kp EQUAL            &kp QMARK            &kp FSLH                                                                                                                                                                                                                                                                                                            
+        &kp LSHFT              &none                &none                &none                &none                &none        &rgb_ug RGB_COLOR_HSB(0,100,25)&rgb_ug RGB_COLOR_HSB(128,100,25)        &kp LT               &kp GT             &kp PLUS             &kp EQUAL            &kp QMARK            &kp FSLH       
+//                                                                                                                                                                                                                                                                                                      
                                                     &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans                                                 
           >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
           };         
@@ -258,35 +287,6 @@
                                                     &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans               &trans                                                 
           >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
           };         
-
-    colemak_layer        {   bindings =<  
-//          `                    1                    2                    3                    4                    5                                                              6                    7                    8                    9                    0                  bksp         
-          &gresc               &kp N1               &kp N2               &kp N4               &kp N4               &kp N5                                                         &kp N6               &kp N7               &kp N8               &kp N9               &kp N0             &kp BSPC       
-//         Tab                   Q                    W                    F                    P                    G                                                              J                    L                    U                    Y                    ;                    -          
-         &kp TAB             &lt nav Q            &lt num W            &lt sym F          &lt pdfext P         &lt pdfdel G                                                       &kp J                &kp L                &kp U                &kp Y              &kp SEMI             &kp MINUS      
-//        HYPER                  A                    R                    S                    T                    D                                                              H                    N                    E                    I                    O                HYPER(')       
-        &kp LHYP           &lt scolemak A       &hml LCTRL R          &hml LALT S          &hml LGUI T          &hml LMEH G                                                    &hmr RMEH H          &hmr RGUI N          &hmr RALT E         &hmr RCTRL I        &hmr scolemak O       &mt RHYP SQT     
-//        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 K                    M                    ,                    .                    /                  RSHIFT       
-        &kp LSHFT              &kp Z                &kp X                &kp C                &kp V                &kp B              &kp C_MUTE        &rgb_ug RGB_TOG           &kp K                &kp M              &kp COMMA             &kp DOT             &kp FSLH             &kp RSHFT      
-//                                                  LCTRL                LALT                 LGUI                 SPACE                 RET                LAYER 2              LAYER 1               RGUI                 RALT                 RCTRL                                                  
-                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt nav RET          &lt nav RET         &lt num SPACE          &kp RGUI             &kp RALT             &kp RCTRL                                                
-          >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-          };         
-
-   scolemak_layer        {   bindings =<  
-//          `                    1                    2                    3                    4                    5                                                              6                    7                    8                    9                    0                  bksp         
-          &gresc             &kp RS(N1)           &kp RS(N2)           &kp RS(N4)           &kp RS(N4)           &kp RS(N5)                                                     &kp LS(N6)           &kp LS(N7)           &kp LS(N8)           &kp LS(N9)           &kp LS(N0)           &kp BSPC       
-//         Tab                   Q                    W                    F                    P                    G                                                              J                    L                    U                    Y                    ;                    -          
-         &kp TAB             &kp RS(Q)            &kp RS(W)            &kp RS(F)            &kp RS(P)            &kp RS(G)                                                      &kp LS(J)            &kp LS(L)            &kp LS(U)            &kp LS(Y)          &kp LS(SEMI)           &kp MINUS      
-//        HYPER                  A                    R                    S                    T                    D                                                              H                    N                    E                    I                    O                HYPER(')       
-        &kp LHYP             &kp RS(A)            &kp RS(R)            &kp RS(S)            &kp RS(T)            &kp RS(D)                                                      &kp LS(H)            &kp LS(N)             &kp LS(E)           &kp LS(I)            &kp LS(O)          &mt RHYP SQT     
-//        LSHIFT                 Z                    X                    C                    V                    B                  C_MUTE              RGB TOG                 K                    M                    ,                    .                    /                  RSHIFT       
-        &kp LSHFT            &kp RS(Z)            &kp RS(X)            &kp RS(C)            &kp RS(V)            &kp RS(B)            &kp C_MUTE        &rgb_ug RGB_TOG           &kp K                &kp M              &kp COMMA             &kp DOT             &kp FSLH             &kp RSHFT      
-//                                                  LCTRL                LALT                 LGUI                 SPACE                 RET                LAYER 2              LAYER 1               RGUI                 RALT                 RCTRL                                                  
-                                                  &kp LCTRL            &kp LALT             &kp LGUI           &lt num SPACE         &lt nav RET          &lt nav RET         &lt num SPACE          &kp RGUI             &kp RALT             &kp RCTRL                                                
-          >;         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-          };         
-
 
               };
        
