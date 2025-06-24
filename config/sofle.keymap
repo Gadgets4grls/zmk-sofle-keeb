@@ -90,7 +90,7 @@
         combo_tlr3 {
             timeout-ms = <200>;
             key-positions = <49 46>;
-            bindings = <&tog num;
+            bindings = <&tog num>;
         };
         combo_tlr4 {
             timeout-ms = <200>;
