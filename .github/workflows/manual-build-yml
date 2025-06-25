@@ -1,6 +1,0 @@
-name: Manual Build Workflow
-on:
-  workflow_dispatch:
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
